@@ -5,10 +5,10 @@
 Install Guide
 #############
 
-Spyder is relatively easy to install on Windows, Linux and macOS.
+Spyder is relatively easy to install on any Windows, Linux or macOS system meeting our basic :ref:`system requirements <run-system-reqs>`.
 Just make sure to read and follow these instructions with care.
 
-If you run into problems, before posting a report, *please* consult our comprehensive :ref:`troubleshooting guide <troubleshooting-guide>` and search the `issue tracker`_ for your error message and problem description.
+If you have questions or run into problems, *please* check our :ref:`FAQ <faq-installing>`, consult our :ref:`troubleshooting guide <troubleshooting-guide>` and search the `issue tracker`_ for your error message and problem description.
 These methods generally fix or isolate the great majority of install-related difficulties.
 Thanks!
 
