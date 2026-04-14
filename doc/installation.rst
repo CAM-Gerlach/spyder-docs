@@ -126,7 +126,7 @@ To ensure you get the most reliable and up-to-date Spyder version and avoid any 
 
 .. note::
 
-   If using Mamba/Mambaforge, substitute ``mamba`` for ``conda`` in the following commands.
+   If using Mamba, substitute ``mamba`` for ``conda`` in the following commands.
 
 
 .. _install-conda-installing:
@@ -147,7 +147,7 @@ For a minimal install without the optional functionality and integration with th
    conda create -c conda-forge -n spyder-env spyder
 
 This installs Spyder into a new environment called ``spyder-env``, using the more up-to-date, non-restricted Conda-Forge channel.
-To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment's default channel with strict channel priority enabled, if this isn't the case already (as it is with Miniforge/Mambaforge or if you've manually configured it):
+To make sure future installs/updates in this environment also use Conda-Forge and are faster and more reliable, make sure to set it as your environment's default channel with strict channel priority enabled, if this isn't the case already (as it is with Miniforge or if you've manually configured it):
 
 .. code-block:: shell
 
