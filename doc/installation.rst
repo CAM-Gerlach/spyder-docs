@@ -28,7 +28,7 @@ Try Spyder online
 
 Want to try out Spyder before installing it?
 With `Binder`_, you can open a functional copy of Spyder online that runs right in your web browser, with no installation needed.
-Visit the `Spyder Binder`_ to get started using Spyder.
+Visit the `Spyder Binder`_ page to get started using Spyder.
 
 .. _Binder: https://mybinder.org/
 .. _Spyder Binder: https://mybinder.org/v2/gh/spyder-ide/binder-environments/spyder-stable?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fspyder-ide%252FSpyder-Workshop%26urlpath%3Ddesktop%252F%26branch%3Dmaster
@@ -44,12 +44,12 @@ Visit the `Spyder Binder`_ to get started using Spyder.
 Standalone installers
 =====================
 
-The standalone installers are our recommended method for most users on Windows, macOS and Linux.
+The standalone installers are recommended for most users on Windows, macOS and Linux.
 They work like any other IDE, where Spyder can be installed and updated independently of the Python environments you use to run your code.
 This avoids the problems with incompatible packages and broken installations users can face when managing Spyder's installation themselves, mixed with their own working environments.
 
 The installers include a built-in Python environment with the most common scientific libraries (e.g. NumPy, SciPy, Pandas, Matpotlib, etc), which can be used out of the box for basic data analysis tasks.
-While an official Environment Manager plugin is currently in beta that will allow you to create and manage your own environments right from Spyder's interface without installing anything else, we currently recommend connecting to an external Python distribution (such as `Anaconda`_, `Miniconda`_, `Miniforge/Mambaforge`_, `WinPython`_ or `Python.org <Python_>`__) to your standalone copy of Spyder.
+To use additional packages, we currently recommend connecting an external Python distribution (such as `Anaconda`_, `Miniconda`_, `Miniforge`_ or `Python.org <Python_>`__) to your standalone copy of Spyder.
 For more information on this, see our :ref:`FAQ entry on the subject <using-packages-installer>`.
 
 .. note::
@@ -64,7 +64,7 @@ Downloading and installing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To download the supported Spyder installer for your platform, simply click the appropriate link below; you can also browse all installer versions from the `downloads page`_.
-Then, double-click the downloaded file to open the installer.
+Then, double-click the downloaded file to open the installer on Windows and macOS, or run it with ``bash`` in a terminal on Linux (``bash path/to/downloaded/Spyder-Linux-x86_64.sh``).
 If a security warning pops up, you may need to click :guilabel:`Yes`, :guilabel:`OK`, :guilabel:`Open`, :guilabel:`Allow` or similar; or on Windows, :guilabel:`More info` followed by :guilabel:`Run anyway`.
 
 .. rst-class:: installer-table
@@ -96,7 +96,7 @@ Updating a standalone install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, Spyder checks for updates automatically on startup, and you can also check manually with :menuselection:`Help --> Check for updates`.
-Standalone installers for Spyder 6+ include update functionality built right into Spyder, which after checking for updates will display a prompt to automatically download and install the current version.
+Standalone installers for Spyder 6+ include update functionality built right into the application, which after checking for updates will display a prompt to automatically download and install the latest version.
 On earlier versions, you'll need to manually download and install the latest release (if on Windows, make sure to remove the old version first from Control Panel/System Settings).
 
 
@@ -108,12 +108,13 @@ Conda-based distributions
 =========================
 
 Spyder is included by default in the `Anaconda`_ Python distribution, which comes with everything you need to get started in an all-in-one package.
-It can also be easily installed in the much lighter-weight `Miniconda`_ and (recommended) `Miniforge/Mambaforge`_, which include just the Conda/Mamba package and environment manager allowing you to create your own environments with any packages you need (with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel, and Mambaforge on top of that replacing Conda with the faster alternative Mamba).
-This is our recommended installation method if you require third-party Spyder plugins or full Variable Explorer support for your own custom packages, as support for both of these in our standalone installers is under active development.
+It can also be easily installed in the much lighter-weight `Miniconda`_ and (recommended) `Miniforge`_, which include just the Conda/Mamba package and environment manager.
+They allow you to create your own environments with any packages you need, with Miniforge defaulting to the Conda-Forge channel instead of the commercial Anaconda channel.
+This is our recommended installation method if you require third-party Spyder plugins or Variable Explorer compatibility with inspecting objects from specialized libraries (e.g. PyTorch or Scikit-Learn), as support for both of these in our standalone installers is still under active development.
 
 .. _Anaconda: https://www.anaconda.com/products/distribution
 .. _Miniconda: https://conda.io/miniconda.html
-.. _Miniforge/Mambaforge: https://github.com/conda-forge/miniforge
+.. _Miniforge: https://github.com/conda-forge/miniforge
 
 
 .. _install-conda-environment:
