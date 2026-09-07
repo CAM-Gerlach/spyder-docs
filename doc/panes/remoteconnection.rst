@@ -4,17 +4,17 @@
 Remote Connection Manager
 #########################
 
-The **Remote Connection Manager** allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
+The **Remote Connections Manager** allows you to create, initiate and manage connections to external servers as well as local containers and VMs for remote development and execution of your code.
 Connecting to a remote host and opening a new :ref:`panes-console` on it allows running code, browsing files and using other Spyder features just as if you were working on your local machine.
 
-It uses the standard, widely-used `SSH protocol`_, which can be used with remote servers, cloud resources and high-performance computing clusters as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
-Additionally, it supports connecting to `JupyterHub`_ servers run by your institution and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
-No configuration is required on the remote host, aside from ensuring a SSH or JupyterHub server is running and accessible.
+It uses the standard, widely-used `SSH protocol`_, which allows you to create a secure connection to remote servers, cloud resources and high-performance computing clusters, as well as local Docker containers, virtual machines (including Windows Subsystem for Linux v2), and headless devices such as the Raspberry Pi.
+Additionally, it supports connecting to `JupyterHub`_ servers run by your company, institution or organization and using their shared Jupyter Server environments, without the limitations of the traditional notebook interface.
+No configuration is required on the remote host, aside from ensuring an SSH or JupyterHub server is running and accessible.
 
 .. _SSH protocol: https://en.wikipedia.org/wiki/Secure_Shell
 .. _JupyterHub: https://jupyter.org/hub
 
-The remote connection manager can be accessed under :menuselection:`Tools --> Manage Remote Connections`, and you can use :menuselection:`Consoles --> New console in remote server` to open new consoles on remote servers you've already configured.
+The remote connections manager can be accessed under :menuselection:`Tools --> Manage remote connections`, and you can use :menuselection:`Consoles --> New console in remote server` to open new consoles on remote servers you've already configured.
 
 
 
@@ -24,11 +24,11 @@ The remote connection manager can be accessed under :menuselection:`Tools --> Ma
 Creating a new connection
 =========================
 
-To create a saved connection a new remote server, open the remote connection manager and click :guilabel:`New connection`.
+To set up a connection to a new remote server, open the remote connections manager and click :guilabel:`New connection`.
 You can then configure the settings appropriate to the connection method.
 
 If your institution already has a `JupyterHub`_ server you'd like to connect to, select the :guilabel:`JupyterHub` tab.
-Otherwise, if you want to connect to most other types of remote, cloud and HPC machines as well as local containers, VMs and devices (like Raspberry Pis), you'll want to use the default :guilabel:`SSH`.
+Otherwise, if you want to connect to most other types of hosts, you'll want to use the default :guilabel:`SSH`.
 Either way, you'll just need to make sure JupyterHub or SSH is available on the remote machine, and you have the appropriate credentials to connect to it.
 
 
@@ -48,11 +48,13 @@ To create a new SSH connection, you need to enter several key details:
 
 #. Type a :guilabel:`Name` for the connection, which is just used to identify it in within the Spyder interface.
 
-#. Enter the IP address or hostname of the device to connect to in :guilabel:`Remote address or host`, changing the port in case it doesn't use the default ``22``
+#. Enter the IP address or hostname of the device to connect to in :guilabel:`Remote address or host`
+
+#. If you or your administrator has configured different SSH port than the default ``22`` on the remote machine (the port the SSH daemon, ``sshd``, is listening on), enter it in the :guilabel:`Port` field.
 
 #. Type the :guilabel:`Username` of the account you want to connect to.
 
-#. If using a :guilabel:`Password`, enter it in the corresponding field. If using a :guilabel:`Key file`, navigate to where it is located (often under :file:`{YOUR_HOME_DIR}/.ssh/`) and enter its passphrase, if you've set one.
+#. If using a :guilabel:`Password`, enter it in the corresponding field. If using a :guilabel:`Key file`, navigate to where it is located (often under :file:`{YOUR_HOME_DIR}/.ssh/` and called :file:`id_rsa` or similar) and enter its passphrase, if you've set one.
 
 #. Finally, you can optionally set the path to a `SSH configuration file`_, which can contain additional advanced options for the host you set above as well as filling in default values for the previous fields.
 
@@ -60,22 +62,8 @@ To create a new SSH connection, you need to enter several key details:
 
 .. _SSH configuration file: https://www.ssh.com/academy/ssh/config
 
-Then, click :guilabel:`Next` and select from the options provided to set up a Python environment in which to run your code on the remote host:
 
-* :guilabel:`Create a new environment`, as the name suggests, will create a new Conda environment with the name and Python version you enter.
-  You can then click :guilabel:`Next` to choose which packages you want installed.
-  Enter the name of the package (such as ``numpy``), and the version (if not the latest), in the fields near the top and click :guilabel:`+` to add it to the list, and click :guilabel:`-` to remove an existing package.
-  A compatible version of the Spyder-Kernels package required by Spyder will be installed automatically.
-
-* :guilabel:`Import an existing environment` will automatically recreate remotely an environment you've exported locally using the `Spyder-Env-Manager`_ plugin.
-  This allows you to run your code remotely with the exact same packages and version as you use locally, even on a machine with a different operating system.
-  Enter the path to which you've exported the ZIP file containing the environment information, and optionally what to name the environment if not the default saved in the file.
-
-* :guilabel:`Don't create environment`, which sets up and saves a connection with the host while allowing you to create an environment manually on the remote machine (advanced), or via the `Spyder-Env-Manager`_ plugin.
-
-.. _Spyder-Env-Manager: https://github.com/spyder-ide/spyder-env-manager
-
-Finally, click :guilabel:`Connect` to initiate the connection to the host, which will automatically validate and securely save all the provided details, autonomously set up the server Spyder needs to connect to on the remote host, and if selected create the environment and install the package you selected, so everything is ready for you to launch your first console.
+Finally, click :guilabel:`Connect` to initiate the connection to the host, which will automatically validate and securely save all the provided details and autonomously set up the server Spyder needs to connect to on the remote host, so everything is ready for you to launch your first console.
 
 Alternatively, you can click :guilabel:`Save` to store the details you've entered in a new connection without actually trying to connect.
 
@@ -120,7 +108,7 @@ Connecting to existing kernels (advanced)
 
 .. caution::
 
-   This is an advanced feature for connecting to existing running kernels, which is substantially more complicated and less capable than creating and managing a connection with Spyder using the Remote Connection Manager.
+   This is an advanced feature for connecting to existing running kernels, which is substantially more complicated and less capable than creating and managing a connection with Spyder using the Remote Connections Manager.
    If possible, we recommend using the latter instead unless your use case requires it.
 
 You can connect to external local and remote kernels (including those managed by Jupyter Notebook or QtConsole) through the :guilabel:`Connect to an existing kernel` dialog under the :guilabel:`Consoles` menu.
@@ -188,7 +176,7 @@ To connect to a kernel on a remote machine,
    Then, enter *either* :file:`{username}`'s password on the remote machine, or browse to an SSH keyfile (typically in the :file:`.ssh` directory in your home folder on the local machine, often called :file:`id_rsa` or similar) registered on it; only one is needed to connect.
    If you check :guilabel:`Save connection settings`, these details will be remembered and filled for you automatically next time you open the dialog.
 
-   Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically 22 unless you or your administrator has configured it otherwise.
+   Note that :guilabel:`Port` is the port number on your remote machine that the SSH daemon (``sshd``) is listening on, typically ``22`` unless you or your administrator has configured it otherwise.
 
    .. image:: /images/console/console-connect-remote-step4.gif
       :alt: Entering pre-filled SSH details into the connection dialog
