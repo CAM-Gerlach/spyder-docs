@@ -52,8 +52,8 @@ Understanding help modes
 
 You can use the options menu ("hamburger" icon) in the top right of the :guilabel:`Help` pane to toggle the help display mode:
 
-* :guilabel:`Rich Text` mode renders the object's docstrings with Sphinx
-* :guilabel:`Plain Text` mode displays the docstring without formatting
+* :guilabel:`Rich Text` mode renders the object's docstrings with Sphinx, as a nicely-formatted page.
+* :guilabel:`Plain Text` mode displays the docstring without formatting.
 * :guilabel:`Show Source` displays the docstring inline with the source code for the selected object (or the Python portion of it if any, for objects that aren't pure Python). This can be useful when docstrings are not available or insufficient to document the object.
 
 .. image:: /images/help/help-modes.gif
