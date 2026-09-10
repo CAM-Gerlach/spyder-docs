@@ -27,7 +27,7 @@ Clicking on a match will automatically open the file and highlight the line wher
 
 If you want to change the scope of your search, select another directory, project or file in the :guilabel:`Search in` dropdown.
 The locations that you select for your search will be stored in the list so you can access them easily in the future.
-To erase all of these saved directories, select the :guilabel:`Clear this list of other directories` option from the :guilabel:`Search in` dropdown.
+To erase all of these saved directories, select the :guilabel:`Clear the list of other directories` option from the :guilabel:`Search in` dropdown.
 
 .. image:: /images/find_in_files/find-in-files-directory.gif
    :alt: Spyder Find pane showing choosing new directory and directory stored in the list
