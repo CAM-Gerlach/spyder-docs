@@ -44,7 +44,7 @@ The top-right options menu (:guilabel:`Hamburger` icon) allows you to toggle sof
 Advanced usage
 ==============
 
-The list of commands shown in the :guilabel:`History` pane is stored in the file :file:`history.py` inside the Spyder configuration directory (:file:`.spyder-py3`) in your user home folder (by default, :file:`C:/Users/{username}` on Windows, :file:`/Users/{username}` for macOS, and typically :file:`/home/{username}` on GNU/Linux).
+The list of commands shown in the :guilabel:`History` pane is stored in the file :file:`history.py` inside the Spyder configuration directory (:file:`.spyder-py3`) in your user home folder (by default, :file:`C:/Users/{username}` on Windows, :file:`/Users/{username}` for macOS, and typically :file:`/home/{username}/.config` on GNU/Linux).
 You might need to show invisible files in order to see it on a non-Windows operating system.
 
 .. image:: /images/history/history-log-file.png
